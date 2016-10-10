@@ -19,5 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::post('/cahier/create', 'CahierController@store');
-Route::get('/cahier/{$id}', 'CahierController@single');
+Route::resource('cahier', 'CahierController');
