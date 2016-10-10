@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-3">
-                            <div class="block-recette" style="height: 100px; background: gold">
+                            <div class="block-recette">
                                 <strong>Titre</strong>
                                 <p>Info</p>
                                 <i class="glyphicon glyphicon-remove"></i>
