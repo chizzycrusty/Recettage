@@ -19,10 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-<<<<<<< HEAD
 Route::resource('cahier', 'CahierController');
-=======
 Route::post('/cahier/create', 'CahierController@store');
 Route::get('/cahier/{$id}', 'CahierController@single');
 Route::get('/cahier/destroy/{$id}', 'CahierController@destroy');
->>>>>>> 248d22cd991af6f349ccdaf64cf41e918551b0eb
