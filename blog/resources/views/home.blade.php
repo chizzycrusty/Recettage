@@ -40,11 +40,23 @@
                 <h4 class="modal-title" id="myModalLabel">Modal title</h4>
             </div>
             <div class="modal-body">
+                {!! Form::open(array(
+             'action' => 'CahierController@store',
+             'method' => 'POST',
+             'class' => 'form-horizontal'
+             ))
+             !!}
+
+                {!! Form::text('title',null,  ['class' => 'form-control', 'placeholder'=>'Titre']) !!}
+                {!! Form::text('info',null,  ['class' => 'form-control', 'placeholder'=>'Information']) !!}
+                {!! Form::text('collab_email',null,  ['class' => 'form-control', 'placeholder'=>'Emails des collaborateurs']) !!}
+                {!! Form::hidden('user_id', \Illuminate\Support\Facades\Auth::user()->id) !!}
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                {!! Form::submit('Créer le cahier', ['class' => 'btn btn-primary']) !!}
+                {!! Form::close() !!}
             </div>
         </div>
     </div>

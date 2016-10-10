@@ -17,6 +17,7 @@ class CreateCahiersTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('title');
+            $table->string('info');
             $table->string('collab_email');
             $table->timestamps();
         });

@@ -57,7 +57,7 @@ class CahierController extends Controller
     {
         $cahier = Cahier::find($id);
 
-        return view('single')->with(compact('cahier'));
+        return view('cahier.show')->with(compact('cahier'));
     }
 
     /**
@@ -91,9 +91,11 @@ class CahierController extends Controller
      */
     public function destroy($id)
     {
+
         $cahier = Cahier::findOrFail($id);
         $cahier->delete();
 
         return redirect() -> route('/home') -> with('success', 'Votre article a bien été supprimé');
+
     }
 }
