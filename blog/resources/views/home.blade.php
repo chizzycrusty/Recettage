@@ -11,9 +11,13 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="block-recette">
-                                <strong>Titre</strong>
-                                <p>Info</p>
-                                <i class="glyphicon glyphicon-remove"></i>
+                                <div class="content-recette">
+                                    <strong>Titre</strong>
+                                    <p>Info</p>
+                                </div>
+                                <div class="block-add" data-toggle="modal" data-target="#delete">
+                                    <i class="glyphicon glyphicon-remove"></i>
+                                </div>
                             </div>
                         </div>
 
@@ -57,6 +61,21 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 {!! Form::submit('Créer le cahier', ['class' => 'btn btn-primary']) !!}
                 {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Êtes-vous sûr de vouloir supprimer ce recettage ?</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Non</button>
+                <a href="{{ url('/cahier/delete/') }}" type="button" class="btn btn-default" data-dismiss="modal">Oui</a>
             </div>
         </div>
     </div>
