@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index');
 
 Route::post('/cahier/create', 'CahierController@store');
 Route::get('/cahier/{$id}', 'CahierController@single');
+Route::get('/cahier/destroy/{$id}', 'CahierController@destroy');

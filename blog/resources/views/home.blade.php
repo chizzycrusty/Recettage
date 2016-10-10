@@ -13,6 +13,7 @@
                             <div class="block-recette" style="height: 100px; background: gold">
                                 <strong>Titre</strong>
                                 <p>Info</p>
+                                <i class="glyphicon glyphicon-remove"></i>
                             </div>
                         </div>
 
