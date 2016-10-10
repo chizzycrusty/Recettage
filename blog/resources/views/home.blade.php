@@ -74,8 +74,8 @@
                 <h4 class="modal-title" id="myModalLabel">Êtes-vous sûr de vouloir supprimer ce recettage ?</h4>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Non</button>
-                <a href="{{ url('/cahier/delete/') }}" type="button" class="btn btn-default" data-dismiss="modal">Oui</a>
+                <a type="button" class="btn btn-default non" data-dismiss="modal">Non</a>
+                <a href="{{ url('/cahier/delete/') }}" type="button" class="btn btn-default oui" data-dismiss="modal">Oui</a>
             </div>
         </div>
     </div>
