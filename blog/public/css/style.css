@@ -43,3 +43,7 @@ body{
 .panel-body a {
 	color: #10346E; !important;
 }
+
+.blockrecette i {
+	text-align: center;
+}

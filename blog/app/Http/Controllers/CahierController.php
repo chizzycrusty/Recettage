@@ -92,5 +92,10 @@ class CahierController extends Controller
     public function destroy($id)
     {
 
+        $cahier = Cahier::findOrFail($id);
+        $cahier->delete();
+
+        return redirect() -> route('/home') -> with('success', 'Votre article a bien été supprimé');
+
     }
 }
