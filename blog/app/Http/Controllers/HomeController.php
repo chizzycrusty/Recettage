@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $cahier = Cahier::all()->where('user_id', Auth::user()->id);
-        return view('home');
+        $cahiers = Cahier::all()->where('user_id', Auth::user()->id);
+        return view('home')->with(compact('cahiers'));
     }
 }

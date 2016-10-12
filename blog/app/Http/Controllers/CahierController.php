@@ -91,6 +91,7 @@ class CahierController extends Controller
      */
     public function destroy($id)
     {
+        dd($id);
 
         $cahier = Cahier::findOrFail($id);
         $cahier->delete();
