@@ -61,5 +61,5 @@ class Cahier extends Model
     public function recettages() {
     	return $this->hasMany('App/Recettage', 'cahier_id', 'id');
     }
->>>>>>> 4349bb2cccf665875a07249ed913bb420b5325a8
+
 }
