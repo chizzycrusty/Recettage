@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Cahier;
-use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Illuminate\Support\Facades\Auth;
 
-class CahierController extends Controller
+class ObjectifController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -39,12 +36,10 @@ class CahierController extends Controller
      */
     public function store(Request $request)
     {
-        $cahier = new Cahier();
-        $cahier->user_id = Auth::user()->id;
-        $cahier->title = $request->title;
-        $cahier->info = $request->info;
-        $cahier->collab_email = $request->collab_email;
-        $cahier->save();
+        $objectif = new Objectif();
+        $objectif->cahier_id = $request->cahier_id;
+        $objectif->content = $request->content;
+        $objectif->save();
         return redirect(url('/cahier/'.$cahier->id));
     }
 
@@ -56,10 +51,7 @@ class CahierController extends Controller
      */
     public function show($id)
     {
-
-        $cahier = Cahier::find($id);
-
-        return view('cahier.show')->with(compact('cahier'));
+        //
     }
 
     /**
@@ -70,7 +62,7 @@ class CahierController extends Controller
      */
     public function edit($id)
     {
-        dd('hello edit');
+        //
     }
 
     /**
@@ -82,12 +74,10 @@ class CahierController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $cahier = new Cahier();
-        $cahier->user_id = Auth::user()->id;
-        $cahier->title = $request->title;
-        $cahier->info = $request->info;
-        $cahier->collab_email = $request->collab_email;
-        $cahier->update();
+        $objectif = new Objectif();
+        $objectif->cahier_id = $request->cahier_id;
+        $objectif->content = $request->content;
+        $objectif->update();
         return redirect(url('/cahier/'.$cahier->id));
     }
 
@@ -99,9 +89,8 @@ class CahierController extends Controller
      */
     public function destroy($id)
     {
-        $cahier = Cahier::find($id);
-        $cahier->delete();
+        $objectif = Objectif::find($id);
+        $objectif->delete();
         return redirect((url('/home')));
     }
-
 }

@@ -54,6 +54,11 @@ body{
 	border-radius: 5px;
 }
 
+.block-recette a {
+	color: white;
+	text-decoration: none;
+}
+
 .block-recette i {
 	position: absolute;
 	top: 6%;
@@ -107,6 +112,7 @@ body{
 	border-radius: 4em;
 	transition-property: background-color;
     transition-duration: 1s;
+    margin-left: 2%;
 }
 
 .addrecette i {
