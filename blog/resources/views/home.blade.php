@@ -18,72 +18,72 @@
                                                 <p>{{$cahier->info}}</p>
                                             </div>
 
-                                           <a href="#"> <div class="block-add" data-toggle="modal" data-target="#delete_{{$cahier->id}}">
-                                                <i class="glyphicon glyphicon-remove"></i>
-                                            </div>
-                                           </a>
+                                            <a href="#"> <div class="block-add" data-toggle="modal" data-target="#delete_{{$cahier->id}}">
+                                                    <i class="glyphicon glyphicon-remove"></i>
+                                                </div>
+                                            </a>
                                         </div>
                                     </a>
                                 </div>
                             @endforeach
 
-                        <div class="col-md-3 colrecette addrecette">
-                            <div class="block-add" data-toggle="modal" data-target="#myModal">
-                                <i class="glyphicon glyphicon-plus"></i>
+                            <div class="col-md-3 colrecette addrecette">
+                                <div class="block-add" data-toggle="modal" data-target="#myModal">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                </div>
                             </div>
+
                         </div>
-                    
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                </div>
-                <div class="modal-body">
-                    {!! Form::open(array(
-                 'action' => 'CahierController@store',
-                 'method' => 'POST',
-                 'class' => 'form-horizontal'
-                 ))
-                 !!}
-
-                    {!! Form::text('title',null,  ['class' => 'form-control', 'placeholder'=>'Titre']) !!}
-                    {!! Form::text('info',null,  ['class' => 'form-control', 'placeholder'=>'Information']) !!}
-                    {!! Form::text('collab_email',null,  ['class' => 'form-control', 'placeholder'=>'Emails des collaborateurs']) !!}
-                    {!! Form::hidden('user_id', \Illuminate\Support\Facades\Auth::user()->id) !!}
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    {!! Form::submit('Créer le cahier', ['class' => 'btn btn-primary']) !!}
-                    {!! Form::close() !!}
-                </div>
-            </div>
-        </div>
-    </div>
-
-    @foreach($cahiers as $cahier)
-        <div class="modal fade" id="delete_{{$cahier->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Êtes-vous sûr de vouloir supprimer ce recettage ?</h4>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        {!! Form::open(array(
+                     'action' => 'CahierController@store',
+                     'method' => 'POST',
+                     'class' => 'form-horizontal'
+                     ))
+                     !!}
+
+                        {!! Form::text('title',null,  ['class' => 'form-control', 'placeholder'=>'Titre']) !!}
+                        {!! Form::text('info',null,  ['class' => 'form-control', 'placeholder'=>'Information']) !!}
+                        {!! Form::text('collab_email',null,  ['class' => 'form-control', 'placeholder'=>'Emails des collaborateurs']) !!}
+                        {!! Form::hidden('user_id', \Illuminate\Support\Facades\Auth::user()->id) !!}
+
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn non btn-default" data-dismiss="modal">Non</button>
-                        <a href="{{url('/cahier/destroy/'.$cahier->id)}}" type="button" class="btn oui btn-default">Oui</a>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        {!! Form::submit('Créer le cahier', ['class' => 'btn btn-primary']) !!}
+                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>
-
         </div>
+
+        @foreach($cahiers as $cahier)
+            <div class="modal fade" id="delete_{{$cahier->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Êtes-vous sûr de vouloir supprimer ce recettage ?</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn non btn-default" data-dismiss="modal">Non</button>
+                            <a href="{{url('/cahier/destroy/'.$cahier->id)}}" type="button" class="btn oui btn-default">Oui</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
     @endforeach
 @endsection

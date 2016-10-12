@@ -29,6 +29,7 @@ class User extends Authenticatable
 
 
     public function cahiers(){
-        $this->hasMany('App/Cahier');
+        return $this->hasMany('App\Cahier', 'user_id', 'id');
+
     }
 }

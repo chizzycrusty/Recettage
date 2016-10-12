@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cahier;
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -55,6 +56,7 @@ class CahierController extends Controller
      */
     public function show($id)
     {
+
         $cahier = Cahier::find($id);
 
         return view('cahier.show')->with(compact('cahier'));
@@ -95,4 +97,5 @@ class CahierController extends Controller
         $cahier->delete();
         return redirect((url('/home')));
     }
+
 }
