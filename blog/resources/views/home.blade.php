@@ -24,10 +24,17 @@
                             @endforeach
 
 
+<<<<<<< Updated upstream
                             <div class="col-md-3">
                                 <div class="block-add" style="height: 100px; background: gold" data-toggle="modal" data-target="#myModal">
                                     <i class="glyphicon glyphicon-plus"></i>
                                 </div>
+=======
+
+                        <div class="col-md-3 addrecette">
+                            <div class="block-add" style="height: 100px; background: gold" data-toggle="modal" data-target="#myModal">
+                                <i class="glyphicon glyphicon-plus"></i>
+>>>>>>> Stashed changes
                             </div>
                         </div>
                     </div>
