@@ -10,7 +10,7 @@
                     <div class="panel-body">
                         <div class="row">
                             @foreach($cahiers as $cahier)
-                                <div class="col-md-3">
+                                <div class="col-md-3 colrecette">
                                     <a href="{{url('cahier/'.$cahier->id)}}">
                                         <div class="block-recette">
                                             <div class="content-recette">
@@ -18,9 +18,10 @@
                                                 <p>{{$cahier->info}}</p>
                                             </div>
 
-                                           <a href="#"> <div class="block-add" data-toggle="modal" data-target="#delete_{{$cahier->id}}">
-                                                <i class="glyphicon glyphicon-remove"></i>
-                                            </div>
+                                            <a href="#"> 
+                                                <div class="block-add" data-toggle="modal" data-target="#delete_{{$cahier->id}}">
+                                                    <i class="glyphicon glyphicon-remove"></i>
+                                                </div>
                                            </a>
                                         </div>
                                     </a>
