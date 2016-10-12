@@ -11,15 +11,17 @@
                         <div class="row">
                             @foreach($cahiers as $cahier)
                                 <div class="col-md-3">
-                                    <div class="block-recette">
-                                        <div class="content-recette">
-                                            <strong>{{$cahier->title}}</strong>
-                                            <p>{{$cahier->info}}</p>
+                                    <a href="{{url('cahier/'.$cahier->id)}}">
+                                        <div class="block-recette">
+                                            <div class="content-recette">
+                                                <strong>{{$cahier->title}}</strong>
+                                                <p>{{$cahier->info}}</p>
+                                            </div>
+                                            <div class="block-add" data-toggle="modal" data-target="#delete_{{$cahier->id}}">
+                                                <i class="glyphicon glyphicon-remove"></i>
+                                            </div>
                                         </div>
-                                        <div class="block-add" data-toggle="modal" data-target="#delete_{{$cahier->id}}">
-                                            <i class="glyphicon glyphicon-remove"></i>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                             @endforeach
 
@@ -77,11 +79,11 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Non</button>
-                        <a href="{{ url('/cahier/delete/'.$cahier->id) }}" type="button" class="btn btn-default">Oui</a>
+                        <a href="{{url('/cahier/destroy/'.$cahier->id)}}" type="button" class="btn btn-default">Oui</a>
                     </div>
                 </div>
             </div>
 
-
+        </div>
     @endforeach
 @endsection

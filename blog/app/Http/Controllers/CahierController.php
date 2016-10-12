@@ -68,7 +68,7 @@ class CahierController extends Controller
      */
     public function edit($id)
     {
-        //
+        dd('hello edit');
     }
 
     /**
@@ -80,7 +80,7 @@ class CahierController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd('hello up');
     }
 
     /**
@@ -91,12 +91,8 @@ class CahierController extends Controller
      */
     public function destroy($id)
     {
-        dd($id);
-
-        $cahier = Cahier::findOrFail($id);
+        $cahier = Cahier::find($id);
         $cahier->delete();
-
-        return redirect() -> route('/home') -> with('success', 'Votre article a bien été supprimé');
-
+        return redirect((url('/home')));
     }
 }
