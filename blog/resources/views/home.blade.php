@@ -17,22 +17,22 @@
                                                 <strong>{{$cahier->title}}</strong>
                                                 <p>{{$cahier->info}}</p>
                                             </div>
-                                            <div class="block-add" data-toggle="modal" data-target="#delete_{{$cahier->id}}">
+
+                                           <a href="#"> <div class="block-add" data-toggle="modal" data-target="#delete_{{$cahier->id}}">
                                                 <i class="glyphicon glyphicon-remove"></i>
                                             </div>
+                                           </a>
                                         </div>
                                     </a>
                                 </div>
                             @endforeach
 
-
-                            <div class="col-md-3">
-                                <div class="block-add" style="height: 100px; background: gold" data-toggle="modal" data-target="#myModal">
-                                    <i class="glyphicon glyphicon-plus"></i>
-                                </div>
+                        <div class="col-md-3 colrecette addrecette">
+                            <div class="block-add" data-toggle="modal" data-target="#myModal">
+                                <i class="glyphicon glyphicon-plus"></i>
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -78,8 +78,8 @@
                         <h4 class="modal-title" id="myModalLabel">Êtes-vous sûr de vouloir supprimer ce recettage ?</h4>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Non</button>
-                        <a href="{{url('/cahier/destroy/'.$cahier->id)}}" type="button" class="btn btn-default">Oui</a>
+                        <button type="button" class="btn non btn-default" data-dismiss="modal">Non</button>
+                        <a href="{{url('/cahier/destroy/'.$cahier->id)}}" type="button" class="btn oui btn-default">Oui</a>
                     </div>
                 </div>
             </div>
