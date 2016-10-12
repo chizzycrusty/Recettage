@@ -97,3 +97,34 @@ body{
 	color: white;
 } 
 
+.addrecette {
+	height: 100px;
+	width: 100px;
+	background-color: #10346E;
+	color: white;
+	border: 1px solid;
+	border-color: #10346E;
+	border-radius: 4em;
+	transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.addrecette i {
+	font-size: 4em;
+	position: absolute;
+	top: 18%;
+	right: 19%;
+	transition-property: font-size;
+    transition-duration: 1s;
+}
+
+.colrecette {
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.addrecette:hover {
+	background-color: #026aa7;
+	border-color: #026aa7;
+}
+

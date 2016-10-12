@@ -10,7 +10,7 @@
                     <div class="panel-body">
                         <div class="row">
                             @foreach($cahiers as $cahier)
-                                <div class="col-md-3">
+                                <div class="col-md-3 colrecette">
                                     <div class="block-recette">
                                         <div class="content-recette">
                                             <strong>{{$cahier->title}}</strong>
@@ -23,8 +23,8 @@
                                 </div>
                             @endforeach
 
-                        <div class="col-md-3 addrecette">
-                            <div class="block-add" style="height: 100px; background: gold" data-toggle="modal" data-target="#myModal">
+                        <div class="col-md-3 colrecette addrecette">
+                            <div class="block-add" data-toggle="modal" data-target="#myModal">
                                 <i class="glyphicon glyphicon-plus"></i>
                             </div>
                         </div>
@@ -74,8 +74,8 @@
                         <h4 class="modal-title" id="myModalLabel">Êtes-vous sûr de vouloir supprimer ce recettage ?</h4>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Non</button>
-                        <a href="{{ url('/cahier/delete/'.$cahier->id) }}" type="button" class="btn btn-default">Oui</a>
+                        <button type="button" class="btn non btn-default" data-dismiss="modal">Non</button>
+                        <a href="{{ url('/cahier/delete/'.$cahier->id) }}" type="button" class="btn oui btn-default">Oui</a>
                     </div>
                 </div>
             </div>
