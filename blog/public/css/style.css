@@ -229,3 +229,12 @@ body{
 .updateblock {
 	text-align: center;
 }
+
+.pdf {
+	text-align: center;
+	padding: 1%;
+}
+
+.end  {
+	margin-bottom: 2%;
+}

@@ -23,7 +23,6 @@
             <div id="wrap_pitch_content">
                 <div class="col-md-8 col-lg-offset-2 singlepitch" id="block_1">
                     <div class="btnsingle">
-                    <br>
                         <button class="btn btn-default btnedit" onclick="updatepitch(1)">Edit</button>
                         <button class="btn btn-default btndelete" onclick="deletePitch(1)">X</button>
                     </div>
@@ -35,7 +34,356 @@
                 </div>
             </div>
         </div>
+
+        <div class="row pitchshow">
+            <div class="col-md-12 marginshow">
+                <div class="col-md-11">
+                    <h4><strong>Cahier des Charges</strong></h4>
+                </div>
+                
+                <div class="col-md-1 addshow">
+                    <div class="block-add" data-toggle="modal" data-target="#myModal">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrap_pitch_content">
+                <div class="col-md-8 col-lg-offset-2 singlepitch" id="block_1">
+                    <div class="btnsingle">
+                        <button class="btn btn-default btnedit" onclick="updatepitch(1)">Edit</button>
+                        <button class="btn btn-default btndelete" onclick="deletePitch(1)">X</button>
+                    </div>
+                    
+                    <strong>Upload Fichier</strong>                  
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="row pitchshow">
+            <div class="col-md-12 marginshow">
+                <div class="col-md-11">
+                    <h4><strong>Objectifs</strong></h4>
+                </div>
+                
+                <div class="col-md-1 addshow">
+                    <div class="block-add" data-toggle="modal" data-target="#myModal">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrap_pitch_content">
+                <div class="col-md-8 col-lg-offset-2 singlepitch" id="block_1">
+                    <div class="btnsingle">
+                        <button class="btn btn-default btnedit" onclick="updatepitch(1)">Edit</button>
+                        <button class="btn btn-default btndelete" onclick="deletePitch(1)">X</button>
+                    </div>
+                    
+                    <strong>Texte :</strong>                  
+                    <div id="content_pitch_wrap">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pitchshow">
+            <div class="col-md-12 marginshow">
+                <div class="col-md-11">
+                    <h4><strong>Equipes</strong></h4>
+                </div>
+                
+                <div class="col-md-1 addshow">
+                    <div class="block-add" data-toggle="modal" data-target="#myModal">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrap_pitch_content">
+                <div class="col-md-8 col-lg-offset-2 singlepitch" id="block_1">
+                    <div class="btnsingle">
+                        <button class="btn btn-default btnedit" onclick="updatepitch(1)">Edit</button>
+                        <button class="btn btn-default btndelete" onclick="deletePitch(1)">X</button>
+                    </div>
+                    
+                    <strong>Client :</strong>                  
+                    <div id="content_pitch_wrap">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+
+                    <strong>Projet :</strong>                  
+                    <div id="content_pitch_wrap">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pitchshow">
+            <div class="col-md-12 marginshow">
+                <div class="col-md-11">
+                    <h4><strong>Outils</strong></h4>
+                </div>
+                
+                <div class="col-md-1 addshow">
+                    <div class="block-add" data-toggle="modal" data-target="#myModal">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrap_pitch_content">
+                <div class="col-md-8 col-lg-offset-2 singlepitch" id="block_1">
+                    <div class="btnsingle">
+                        <button class="btn btn-default btnedit" onclick="updatepitch(1)">Edit</button>
+                        <button class="btn btn-default btndelete" onclick="deletePitch(1)">X</button>
+                    </div>
+                    
+                    <strong>Texte :</strong>                  
+                    <div id="content_pitch_wrap">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pitchshow">
+            <div class="col-md-12 marginshow">
+                <div class="col-md-11">
+                    <h4><strong>Calendrier</strong></h4>
+                </div>
+                
+                <div class="col-md-1 addshow">
+                    <div class="block-add" data-toggle="modal" data-target="#myModal">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrap_pitch_content">
+                <div class="col-md-8 col-lg-offset-2 singlepitch" id="block_1">
+                    <div class="btnsingle">
+                        <button class="btn btn-default btnedit" onclick="updatepitch(1)">Edit</button>
+                        <button class="btn btn-default btndelete" onclick="deletePitch(1)">X</button>
+                    </div>
+                    
+                    <strong>Upload Fichier</strong>                  
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row pitchshow">
+            <div class="col-md-12 marginshow">
+                <div class="col-md-11">
+                    <h4><strong>Mots de Passe</strong></h4>
+                </div>
+                
+                <div class="col-md-1 addshow">
+                    <div class="block-add" data-toggle="modal" data-target="#myModal">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrap_pitch_content">
+                <div class="col-md-8 col-lg-offset-2 singlepitch" id="block_1">
+                    <div class="btnsingle">
+                        <button class="btn btn-default btnedit" onclick="updatepitch(1)">Edit</button>
+                        <button class="btn btn-default btndelete" onclick="deletePitch(1)">X</button>
+                    </div>
+                    <strong>Nom :</strong>
+                    <br>
+                    <strong>Password :</strong>                  
+                    <div id="content_pitch_wrap">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pitchshow">
+            <div class="col-md-12 marginshow">
+                <div class="col-md-11">
+                    <h4><strong>Comptes Rendus</strong></h4>
+                </div>
+                
+                <div class="col-md-1 addshow">
+                    <div class="block-add" data-toggle="modal" data-target="#myModal">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrap_pitch_content">
+                <div class="col-md-8 col-lg-offset-2 singlepitch" id="block_1">
+                    <div class="btnsingle">
+                        <button class="btn btn-default btnedit" onclick="updatepitch(1)">Edit</button>
+                        <button class="btn btn-default btndelete" onclick="deletePitch(1)">X</button>
+                    </div>
+                    
+                    <strong>Upload Fichier :</strong>                  
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row pitchshow">
+            <div class="col-md-12 marginshow">
+                <div class="col-md-11">
+                    <h4><strong>Mail Thread</strong></h4>
+                </div>
+                
+                <div class="col-md-1 addshow">
+                    <div class="block-add" data-toggle="modal" data-target="#myModal">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrap_pitch_content">
+                <div class="col-md-8 col-lg-offset-2 singlepitch" id="block_1">
+                    <div class="btnsingle">
+                        <button class="btn btn-default btnedit" onclick="updatepitch(1)">Edit</button>
+                        <button class="btn btn-default btndelete" onclick="deletePitch(1)">X</button>
+                    </div>
+                    
+                    <strong>Upload Fichier</strong>                  
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row pitchshow">
+            <div class="col-md-12 marginshow">
+                <div class="col-md-11">
+                    <h4><strong>Gestion des risques</strong></h4>
+                </div>
+                
+                <div class="col-md-1 addshow">
+                    <div class="block-add" data-toggle="modal" data-target="#myModal">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrap_pitch_content">
+                <div class="col-md-8 col-lg-offset-2 singlepitch" id="block_1">
+                    <div class="btnsingle">
+                        <button class="btn btn-default btnedit" onclick="updatepitch(1)">Edit</button>
+                        <button class="btn btn-default btndelete" onclick="deletePitch(1)">X</button>
+                    </div>
+                    
+                    <strong>Nom :</strong> 
+                    <br>
+                    <strong>Niveau de risque</strong> <br>
+                    <select name="" id="">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                    </select>
+                    <br>
+                    <strong>Action:</strong>                   
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row pitchshow">
+            <div class="col-md-12 marginshow">
+                <div class="col-md-11">
+                    <h4><strong>Livrables</strong></h4>
+                </div>
+                
+                <div class="col-md-1 addshow">
+                    <div class="block-add" data-toggle="modal" data-target="#myModal">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrap_pitch_content">
+                <div class="col-md-8 col-lg-offset-2 singlepitch" id="block_1">
+                    <div class="btnsingle">
+                        <button class="btn btn-default btnedit" onclick="updatepitch(1)">Edit</button>
+                        <button class="btn btn-default btndelete" onclick="deletePitch(1)">X</button>
+                    </div>
+                    
+                    <strong>Upload Fichier :</strong>                  
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row pitchshow">
+            <div class="col-md-12 marginshow">
+                <div class="col-md-11">
+                    <h4><strong>Débugage</strong></h4>
+                </div>
+                
+                <div class="col-md-1 addshow">
+                    <div class="block-add" data-toggle="modal" data-target="#myModal">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrap_pitch_content">
+                <div class="col-md-8 col-lg-offset-2 singlepitch" id="block_1">
+                    <div class="btnsingle">
+                        <button class="btn btn-default btnedit" onclick="updatepitch(1)">Edit</button>
+                        <button class="btn btn-default btndelete" onclick="deletePitch(1)">X</button>
+                    </div>
+                    
+                    <strong>Nom :</strong> 
+                    <br>
+                    <strong>Texte :</strong>                 
+                    <div id="content_pitch_wrap">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pitchshow">
+            <div class="col-md-12 marginshow">
+                <div class="col-md-11">
+                    <h4><strong>Recettage</strong></h4>
+                </div>
+                
+                <div class="col-md-1 addshow">
+                    <div class="block-add" data-toggle="modal" data-target="#myModal">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wrap_pitch_content">
+                <div class="col-md-8 col-lg-offset-2 singlepitch" id="block_1">
+                    <div class="btnsingle">
+                        <button class="btn btn-default btnedit" onclick="updatepitch(1)">Edit</button>
+                        <button class="btn btn-default btndelete" onclick="deletePitch(1)">X</button>
+                    </div>
+                    
+                    <strong>Upload Fichier</strong>                  
+                    
+                </div>
+            </div>
+        </div>
+        
+    <div class="row pitchshow end">
+        <div class="col-md-12 pdf">
+            <button class="btn btn-default oui">Imprimer le PDF</button>
+        </div>
     </div>
+
+    </div>
+
+    {{-- Modals --}}
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -57,6 +405,8 @@
             </div>
         </div>
     </div>
+    
+    {{-- Scripts --}}
 
     <script>
         function sendPitch(){
@@ -80,7 +430,7 @@
 
             $('#block_'+id).html("<div class='updateblock row'><select id='update_type'>" +
                     "<option value='Pitch' class='Pitch'>Pitch</option>" +
-                    "<option value='Pitch' class='Pitch'>Brief</option></select><br><textarea rows='6' cols='70' id='update_content'>"+content+"</textarea><br><button class='btn btn-default' onclick='update_pitch(1)'>Save</button><button class='btn btn-default' onclick='cancel_pitch(1,'"+cancel_html+"')'>Cancel</button></div>");
+                    "<option value='Pitch' class='Pitch'>Brief</option></select><br><textarea rows='6' cols='70' id='update_content'>"+content+"</textarea><br><button class='btn btn-default oui' onclick='update_pitch(1)'>Save</button><button class='btn btn-default non' onclick='cancel_pitch(1,"+cancel_html+")'>Cancel</button></div>");
         }
 
         function cancel_pitch(id,cancel_html){
