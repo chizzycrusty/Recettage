@@ -13,7 +13,7 @@ class CreatePitchsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pitchs', function (Blueprint $table) {
+        Schema::create('pitches', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('cahier_id');
             $table->string('type');

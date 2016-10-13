@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Pitch;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Input;
 
 class PitchController extends Controller
 {
@@ -36,12 +38,14 @@ class PitchController extends Controller
      */
     public function store(Request $request)
     {
+        $array = $request->json()->all();
         $pitch = new Pitch();
-        $pitch->cahier_id = $request->cahier_id;
-        $pitch->type = $request->type;
-        $pitch->content = $request->content;
+        $pitch->cahier_id = intval($array['cahier_id']);
+        $pitch->type = $array['type'];
+        $pitch->content = $array['content'];
         $pitch->save();
-        return redirect(url('/cahier/'.$cahier->id));
+
+        dd('saved');
     }
 
     /**

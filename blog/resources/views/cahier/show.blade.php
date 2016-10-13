@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+        <input type="hidden" value="{{$cahier->id}}" id="cahier_id">
         <div class="row" style="background: #FFFFFF; border: solid black">
             Titre: {{$cahier->title}}, info : {{$cahier->info}}
 
@@ -48,12 +49,27 @@
 
     <script>
         function sendPitch(){
-            var type, content, html;
+            var type, content, html, cahier_id;
+            cahier_id = $('#cahier_id').val();
             type = $('#type_pitch').val();
             content = $('#content_pitch').val();
             html = $('#wrap_pitch_content').html();
             html = html + '<div class="col-md-8 col-lg-offset-2" style="border: solid red">TYPE : '+type+'<br>Content :'+content+'</div>';
             $('#wrap_pitch_content').html(html);
+
+            var dataT = {};
+            dataT['cahier_id'] = cahier_id;
+            dataT['type'] = type;
+            dataT['content'] = content;
+            var data = JSON.stringify(dataT);
+            console.log(data);
+            toJson =
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:7000/recette/Recettage/blog/public/pitch/store",
+                data: data
+            });
+
         }
 
         function deletePitch(id){
