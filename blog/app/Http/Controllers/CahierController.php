@@ -58,8 +58,12 @@ class CahierController extends Controller
     {
 
         $cahier = Cahier::find($id);
+        $pitchs = $cahier->pitchs();
+        $cdc = $cahier->cdcs();
+        $objectifs = $cahier->objectifs();
 
-        return view('cahier.show')->with(compact('cahier'));
+
+        return view('cahier.show')->with(compact('cahier', 'pitchs', 'cdc', 'objectifs'));
     }
 
     /**
@@ -80,8 +84,10 @@ class CahierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
+
+
         $cahier = new Cahier();
         $cahier->user_id = Auth::user()->id;
         $cahier->title = $request->title;

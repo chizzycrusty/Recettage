@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\CDC;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 
 class CDCController extends Controller
 {
@@ -36,12 +39,17 @@ class CDCController extends Controller
      */
     public function store(Request $request)
     {
-        $cdc = new Cdc();
-        $cdc->cahier_id = $request->cahier_id;
-        $cdc->name = $request->name;
-        $cdc->filelocation = $request->filelocation;
-        $cdc->save();
-        return redirect(url('/cahier/'.$cahier->id));
+
+        $file = Input::file('cdc');
+        $destinationPath = 'temp'; // upload path
+        $extension = $file->getClientOriginalExtension(); // getting image extension
+        $fileName = rand(11111,99999).'.'.$extension; // renameing image
+        $file->move($destinationPath, $fileName); // uploading file to given path
+        DB::table('cdcs')->insert(
+            ['cahier_id' => $request->cahier_id, 'name' => $fileName, 'filelocation'=>$destinationPath.'/'.$fileName]
+        );
+
+        return redirect(url('/cahier/'.$request->cahier_id));
     }
 
     /**

@@ -85,11 +85,15 @@ body{
 .oui {
 	background-color: #188502;
 	color: white;
+	transition-property: background-color;
+    transition-duration: 1s;
 }
 
 .non {
 	background-color: #7F0002;
 	color: white;
+	transition-property: background-color;
+    transition-duration: 1s;
 }
 
 .oui:hover{
@@ -134,3 +138,107 @@ body{
 	border-color: #026aa7;
 }
 
+/* Show Recettage */
+
+.marginshow {
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.titleshow {
+	background-color:  #10346E;
+	color: white;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.pitchshow {
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+}
+
+.addshow {
+	height: 50px;
+	width: 50px;
+	background-color: #10346E;
+	color: white;
+	border: 1px solid;
+	border-color: #10346E;
+	border-radius: 4em;
+	transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.addshow i {
+	font-size: 2em;
+	position: absolute;
+	top: 19%;
+	right: 19%;
+	transition-property: font-size;
+    transition-duration: 1s;
+}
+
+.addshow:hover {
+	background-color: #026aa7;
+	border-color: #026aa7;
+}
+
+.singlepitch {
+	border: 1px solid black;
+	padding:1%;
+	margin-bottom: 1%;
+}
+
+.btnsingle {
+	text-align: right;
+}
+
+.btnedit {
+	background-color: #026aa7;
+	border-color: #026aa7;
+	color: white;
+	transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.btnedit:hover {
+	background-color: #193BB5;
+	border-color: #026aa7;
+	color: white;
+}
+
+.btndelete {
+	background-color: #7F0002;
+	border-color: #7F0002;
+	color: white;
+	transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.btndelete:hover {
+	background-color: #C5000D;
+	border-color: #7F0002;
+	color: white;
+}
+
+.modalpitch {
+	text-align: center;
+}
+
+.updateblock {
+	text-align: center;
+}
+
+.pdf {
+	text-align: center;
+	padding: 1%;
+}
+
+.end  {
+	margin-bottom: 2%;
+}
+
+.pitch_form{
+	display: none;
+}

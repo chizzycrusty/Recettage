@@ -45,7 +45,8 @@ class PitchController extends Controller
         $pitch->content = $array['content'];
         $pitch->save();
 
-        dd('saved');
+
+        return $pitch->toJson();
     }
 
     /**
@@ -77,14 +78,16 @@ class PitchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $pitch = new Pitch();
-        $pitch->cahier_id = $request->cahier_id;
-        $pitch->type = $request->type;
-        $pitch->content = $request->content;
+
+        $array = $request->json()->all();
+        $pitch = Pitch::find($array['pitch_id']);
+        $pitch->type = $array['type'];
+        $pitch->content = $array['content'];
         $pitch->update();
-        return redirect(url('/cahier/'.$cahier->id));
+        dd('updated');
+
     }
 
     /**
@@ -98,5 +101,10 @@ class PitchController extends Controller
         $pitch = Pitch::find($id);
         $pitch->delete();
         return redirect((url('/home')));
+    }
+
+    public function last(){
+        $pitch = Pitch::orderby('id', 'desc')->first();
+        return $pitch->toJson();
     }
 }

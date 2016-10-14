@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Objectif;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -36,11 +37,13 @@ class ObjectifController extends Controller
      */
     public function store(Request $request)
     {
+
+        $array = $request->json()->all();
         $objectif = new Objectif();
-        $objectif->cahier_id = $request->cahier_id;
-        $objectif->content = $request->content;
+        $objectif->cahier_id = $array['cahier_id'];
+        $objectif->content = $array['content'];
         $objectif->save();
-        return redirect(url('/cahier/'.$cahier->id));
+
     }
 
     /**
@@ -72,13 +75,16 @@ class ObjectifController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $objectif = new Objectif();
-        $objectif->cahier_id = $request->cahier_id;
-        $objectif->content = $request->content;
+        $array = $request->json()->all();
+
+        $objectif = Objectif::find(intval($array['obj_id']));
+
+        $objectif->content = $array['content'];
+
         $objectif->update();
-        return redirect(url('/cahier/'.$cahier->id));
+
     }
 
     /**
@@ -92,5 +98,10 @@ class ObjectifController extends Controller
         $objectif = Objectif::find($id);
         $objectif->delete();
         return redirect((url('/home')));
+    }
+
+    public function last(){
+        $pitch = Objectif::orderby('id', 'desc')->first();
+        return $pitch->toJson();
     }
 }

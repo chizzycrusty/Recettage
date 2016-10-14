@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Cahier extends Model
 {
@@ -11,15 +12,16 @@ class Cahier extends Model
     }
 
     public function pitchs() {
-    	return $this->hasMany('App/Pitch', 'cahier_id', 'id');
+        return Pitch::where('cahier_id', $this->id)->get();
+/*    	return $this->hasMany('App/Pitch', 'cahier_id', 'id');*/
     }
 
     public function cdcs() {
-    	return $this->hasMany('App/CDC', 'cahier_id', 'id');
+        return DB::table('cdcs')->where('cahier_id', $this->id)->first();
     }
 
     public function objectifs() {
-    	return $this->hasMany('App/Objectif', 'cahier_id', 'id');
+        return DB::table('objectifs')->where('cahier_id', $this->id)->get();
     }
 
     public function equipes() {
